@@ -7,7 +7,7 @@ Member Management project - Backend Development
 
 1. Data: Member ID, name.
 2. Function: Membership registration, member inquiry
-3. The data store has not been selected yet (virtual scenario).
+3. The database has not been selected yet (virtual scenario) - using h2 database.
 
 # <Project goal>
   
