@@ -6,11 +6,11 @@ import java.sql.*;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Optional;
-public class jdbcMemberRepository implements MemberRepository{
+public class JdbcMemberRepository implements MemberRepository{
 
     private final DataSource dataSource;
 
-    public jdbcMemberRepository(DataSource datasource) {
+    public JdbcMemberRepository(DataSource datasource) {
         this.dataSource = datasource;
     }
 
