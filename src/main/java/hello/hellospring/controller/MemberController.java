@@ -15,6 +15,9 @@ public class MemberController {
 
     private final MemberService memberService;
 
+    // 필드 주입 @Autowired private MemberService memberService;
+
+    // 생성자 주입 - 어플리케이션 조립단계에서 한번 들어오고 끝남(권장)
     @Autowired
     public MemberController(MemberService memberService) {
         this.memberService = memberService;
