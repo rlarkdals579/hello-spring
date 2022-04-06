@@ -22,7 +22,7 @@ public class JdbcTemplateMemberRepository implements MemberRepository {
         this.jdbcTemplate = new JdbcTemplate(dataSource);
     }
 
-    @@Override
+    @Override
     public Member save(Member member) {
 
         SimpleJdbcInsert jdbcInsert = new SimpleJdbcInsert(jdbcTemplate);
