@@ -14,7 +14,7 @@ public class JpaMemberRepository implements MemberRepository {
         this.em = em;
     }
 
-
+    //Jpa가 insert쿼리 만들어서 DB에 모든 것을 설정함
     @Override
     public Member save(Member member) {
         em.persist(member);
@@ -27,7 +27,7 @@ public class JpaMemberRepository implements MemberRepository {
         return Optional.ofNullable(member);
     }
 
-    @Override
+    @Override // jpql
     public Optional<Member> findByName(String name) {
         List<Member> result = em.createQuery("select m from Member m where m.name = :name", Member.class)
                 .setParameter("name", name)
@@ -35,7 +35,7 @@ public class JpaMemberRepository implements MemberRepository {
         return result.stream().findAny();
     }
 
-    @Override
+    @Override //객체 자체를 SELECT함, MAPPING이 이미 다 되어있다.
     public List<Member> findAll() {
         return em.createQuery("select m from Member m", Member.class)
                 .getResultList();
