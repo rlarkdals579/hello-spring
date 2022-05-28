@@ -22,9 +22,9 @@ public class MemberService {
      * member sign-in
      */
     public Long join(Member member) {
-        validateDuplicateMember(member); // duplicated member name X
-        memberRepository.save(member);
-        return member.getId();
+            validateDuplicateMember(member); // duplicated member name X
+            memberRepository.save(member);
+            return member.getId();
     }
 
     private void validateDuplicateMember(Member member) {
